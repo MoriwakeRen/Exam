@@ -24,7 +24,7 @@ public class LoginExecuteAction extends Action{
 				return "login.jsp";
 
 			}
-			return "error.jso";
+			return "error.jsp";
 	}
 }
 
