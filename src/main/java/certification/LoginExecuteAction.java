@@ -1,5 +1,7 @@
 package certification;
 
+import bean.Student;
+import dao.StudentDAO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -14,7 +16,7 @@ public class LoginExecuteAction extends Action{
 			String id=request.getParameter("id");
 			String password=request.getParameter("password");
 			StudentDAO dao=new StudentDAO();
-			Student studentr=dao.search(id, password);
+			Student student=dao.loginかget(id, password);
 			
 			if(student!=null) {
 				session.setAttribute("student", student);
