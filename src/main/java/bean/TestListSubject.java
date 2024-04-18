@@ -32,7 +32,7 @@ public class TestListSubject implements java.io.Serializable{
 	}
 //	ここもわからん
 	public String getPoint(int key) {
-		return 
+		return points.get(key).toString();
 	}
 	
 	public void setEntYear(int entYear) {
@@ -57,7 +57,7 @@ public class TestListSubject implements java.io.Serializable{
 	
 //	ここもわからん
 	public void putPoint(int key,int value) {
-		map.put(key,value);
+		this.points.put(key,value);
 	}
 	
 }

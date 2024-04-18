@@ -30,6 +30,10 @@ public class Teacher implements java.io.Serializable{
 		this.password=password;
 	}
 	
+	public void setName(String name) {
+		this.name=name;
+	}
+	
 	public void setSchool(School school) {
 		this.school=school;
 	}
