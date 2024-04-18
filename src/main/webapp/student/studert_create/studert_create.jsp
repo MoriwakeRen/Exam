@@ -7,13 +7,14 @@
 </head>
 <body>
 <section>
-<form id ="touroku">
-<form method="POST" action="#">
+<form method="POST" action="#" id ="touroku">
 		
 	<dl>
 		<dt>入学年度<dt>
-		 <select name ="year" id="year">
-		<dd><option value="2010">2010</option>
+		<dd>
+  <select name="year" id="year" required>
+  <option value="" disabled selected >------------------</option>
+        <option value="2010">2010</option>
 		<option value="2011">2011</option>
 		<option value="2012">2012</option>
 		<option value="2013">2013</option>
@@ -34,12 +35,11 @@
 		<option value="2028">2028</option>
 		<option value="2029">2029</option>
 		<option value="2030">2030</option>
-		</select>
+  </select>
+		</dd>
 		
-		</dd>
 		<dt>学生番号<dt>
-		<dd><input type="text" value="" required>
-		</dd>
+		<dd><input type="text" value="" required></dd>
 		<dt>氏名<dt>
 		<dd><input type="text" value="" required></dd>
 		<dt>クラス<dt>
@@ -47,9 +47,12 @@
 		<option value="131">131</option>
 		<option value="201">201</option>
 		<option value="101">101</option>
-		<option value="201">201</option></dd>
+		<option value="201">201</option>
+		</select></dd>
+	</dl>
+		
 		<input type="submit" value="登録して終了">
-		</form> 
+</form> 
 </section>
 </body>
 
