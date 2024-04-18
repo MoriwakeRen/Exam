@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import bean.Teacher;
 
 
-public class TeacherDAO extends DAO{
+public class TeacherDao extends Dao{
 	public Teacher get(String id) throws Exception{
 		Teacher teacher=null;
 		
@@ -23,7 +23,7 @@ public class TeacherDAO extends DAO{
 			Teacher t=new Teacher();
 			t.setId(rs.getString("id"));
 			t.setPassword(rs.getString("password"));
-			t.setName(rs.getString("password"));
+			t.setName(rs.getString("name"));
 			}
 		
 		st.close();

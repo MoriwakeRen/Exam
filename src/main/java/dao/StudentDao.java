@@ -6,7 +6,7 @@ import java.util.List;
 import bean.School;
 import bean.Student;
 
-public class StudentDAO extends DAO{
+public class StudentDao extends Dao{
 	private String baseSql;
 	
 	public Student get(String no) throws Exception{
