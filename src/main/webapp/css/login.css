@@ -1,8 +1,8 @@
 
 .container {
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
-  padding: 0 auto;
+  padding: 0;
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -18,19 +18,24 @@ h2 {
 
 input[type="text"],
 input[type="password"] {
-  width: 93%;
+  width: 94%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: lightblue;
 }
+
+/*.loginpass{*/
+/*	vertical-align: middle;*/
+/*}*/
 
 .passwordbox{
   text-align: center;
 }
 
 .loginbutton{
-	text-align: ;
+	text-align: center;
 }
 input[type="button"] {
   width: 50%;

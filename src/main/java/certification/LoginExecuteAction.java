@@ -1,32 +1,36 @@
 package certification;
 
-import bean.Student;
-import dao.StudentDAO;
+import bean.Teacher;
+import dao.TeacherDao;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import tool.Action;
 
 public class LoginExecuteAction extends Action{
-	public String execute(
-			HttpServletRequest request,HttpServletResponse response
+	public void execute(
+			HttpServletRequest req,HttpServletResponse res
 		) throws Exception{
-			HttpSession session=request.getSession();
+//			HttpSession session=req.getSession();
 			
-			String id=request.getParameter("id");
-			String password=request.getParameter("password");
-			StudentDAO dao=new StudentDAO();
-			Student student=dao.loginかget(id, password);
+			String id=req.getParameter("id");
+			String password=req.getParameter("password");
+			TeacherDao dao=new TeacherDao();
+			Teacher teacher=dao.login(id,password);
 			
-			if(student!=null) {
-				session.setAttribute("student", student);
-				return "menu.jsp";
+			if(teacher!=null) {
+				RequestDispatcher rd = req.getRequestDispatcher("menu.jsp");
+				rd.forward(req, res);
+//				session.setAttribute("teacher", teacher);
+//				return "menu.jsp";
 			}else {
-				request.setAttribute("message", "IDまたはパスワードが確認できませんでした");
-				return "login.jsp";
+				req.setAttribute("message", "IDまたはパスワードが確認できませんでした");
 
+				RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+				rd.forward(req, res);
 			}
-			return "error.jsp";
+			RequestDispatcher rd = req.getRequestDispatcher("error.jsp");
+			rd.forward(req, res);
 	}
 }
 

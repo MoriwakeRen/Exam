@@ -30,7 +30,7 @@ public class TestListSubject implements java.io.Serializable{
 	public Map<Integer,Integer> getPoints(){
 		return points;
 	}
-//	ここもわからん
+	
 	public String getPoint(int key) {
 		return points.get(key).toString();
 	}
@@ -55,7 +55,6 @@ public class TestListSubject implements java.io.Serializable{
 		this.points=points;
 	}
 	
-//	ここもわからん
 	public void putPoint(int key,int value) {
 		this.points.put(key,value);
 	}
