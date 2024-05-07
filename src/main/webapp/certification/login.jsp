@@ -14,7 +14,8 @@
 				placeholder="20文字以内の半角英数字でご入力ください" required>
 		</p>
 		<div class="passwordbox">
-		<input type="checkbox" name="chk_d_ps" id="chk_d_ps"><label>パスワードを表示</label>
+		<input type="checkbox" name="chk_d_ps" id="chk_d_ps">
+		<label>パスワードを表示</label>
 		</div>
 		
 		<script type="text/javascript">
