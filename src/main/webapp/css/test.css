@@ -1,0 +1,121 @@
+#Wrapper {
+width: 1000px; /* 幅を1000pxに設定 */
+background-color: #ffffff; /* Wrapperの背景色を設定 */
+margin: 0 auto;
+}
+
+h1{
+	width: 1000px;
+	background-color: #b0c4de;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 25px;
+}
+
+h2{
+	float: right;
+	width: 700px;
+	background-color: #dcdcdc; /* 背景色を#808080に設定 */
+    color: #000000; /* 文字色を黒色に設定 */
+    margin-top: 0;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#maincontent {
+	width: 725px;
+	float: right;
+	border-left: solid 2px #333;
+	height: 10px;
+}       
+
+#sidebar {
+    width: 275px;
+    float: left;
+    border-right: solid 2px #dcdcdc; height: 100%;
+}
+
+#side_banner ul{
+    list-style: none;
+    margin: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+#side_banner li.naka{
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#side_banner li.naka2{
+    margin-top: 0px;
+    margin-left: 1em;
+    text-indent: -0.0625em;
+}
+
+#side_banner li.naka3{
+	margin-left: 1em;
+    text-indent: -0.0625em;
+    margin-top: 10px;
+}
+
+#side_banner li.ue{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding-top: 15px;
+}
+
+#newregist{
+	list-style: none;
+	float: right;
+	
+}
+#search-container {
+  float: right;
+  width: 700px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 20px
+}
+
+select{
+  border: 1px solid lightgray;
+  padding-right: 150px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 3px;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+#row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.student-action{
+	margin-top: 15px;
+}
+
+button {
+	width: 60px;
+	height: 40px;
+	border: none;
+	color: white;
+	background-color: #505266;
+	margin-top: 5px;
+	margin-right: 15px; 
+	border-radius: 8px;
+}
