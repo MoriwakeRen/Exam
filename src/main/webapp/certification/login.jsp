@@ -7,10 +7,10 @@
 		<span class="label label-danger">${message}</span>
 		<h2>ログイン</h2>
 		<p>
-			ID<input type="text" name="id" placeholder="半角でご入力ください" required>
+			ID<input type="text" name="id" values="id" placeholder="半角でご入力ください" required>
 		</p>
 		<p>
-			パスワード<input type="password" name="password" id="password"
+			パスワード<input type="password" name="password" values="password" id="password"
 				placeholder="20文字以内の半角英数字でご入力ください" required>
 		</p>
 		<div class="passwordbox">
