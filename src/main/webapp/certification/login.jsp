@@ -1,6 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
-
+<jsp:include page="header.jsp"/>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 
 <div class="container">
@@ -37,5 +37,5 @@
 		</div>
 	</form>
 </div>
-
+<jsp:include page="footer.jsp"/>
 <%@include file="../footer.html"%>

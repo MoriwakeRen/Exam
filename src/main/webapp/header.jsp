@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>得点管理システム</h1>
-	<span style="color: blue;"><%= getUserName() %></span>
+	<span style="color: blue;"><%= getName() %></span>
 
 <%
     HttpSession session = request.getSession(false);
@@ -33,3 +33,5 @@ private String getName() {
     return null; // セッションが存在しない場合はゲストとして表示
 }
 %>
+</body>
+</html>
