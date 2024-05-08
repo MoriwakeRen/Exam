@@ -3,6 +3,6 @@
 
 <h2>ログアウト</h2>
 <p>ログアウトしました</p>
-<p><a href="Logout.action">ログアウト</a></p>
+<p><a href="Login.action">ログイン</a></p>
 
 <%@include file="../footer.html"%>
