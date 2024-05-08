@@ -1,4 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8"%>
+<link rel="stylesheet" type="text/css" href="../css/test.css">
 <aside id="sidebar">
                 <section id="side_banner">
                     <ul>
