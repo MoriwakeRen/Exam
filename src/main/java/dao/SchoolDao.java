@@ -3,14 +3,12 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
 
 import bean.School;
 
 public class SchoolDao extends Dao{
 	public School get(String no)throws Exception{
-		List<School> list=new ArrayList<>(); // Product型の配列を作成
+		School school=null; // Product型の配列を作成
 
 		Connection con=getConnection(); // DBに接続(DAOのgetConnectionメソッドを実行)
 
@@ -22,16 +20,14 @@ public class SchoolDao extends Dao{
 
 		// データを順に取得
 		while (rs.next()) {
-			School s=new School();
-			s.setCd(rs.getString("cd"));
-			s.setName(rs.getString("name"));
-			list.add(s); // データを一件取得するごとにlistに追記する
-			
+			school=new School();
+			school.setCd(rs.getString("cd"));
+			school.setName(rs.getString("name"));			
 		}
 
 		st.close();
 		con.close(); // DB接続を閉じる
 
-		return list; // listの値を返却する
+		return school; // listの値を返却する
 	};
 }

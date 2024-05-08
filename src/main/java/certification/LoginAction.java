@@ -1,15 +1,17 @@
 package certification;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import tool.Action;
 
 public class LoginAction extends Action{
-	public String execute(
-			HttpServletRequest request,HttpServletResponse response
+	public void execute(
+			HttpServletRequest req,HttpServletResponse res
 		) throws Exception{
 			
-			return "login.jsp";
+			RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+			rd.forward(req, res);
 	}
 }
 
