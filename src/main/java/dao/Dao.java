@@ -12,7 +12,7 @@ import java.sql.Connection;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-public class DAO {
+public class Dao {
 	static DataSource ds;
 
 	// データベースの接続に必要な処理をgetConnectionというメソッドにまとめておく
