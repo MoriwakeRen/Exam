@@ -33,9 +33,9 @@ public class Student {
 	}
 	
 //	ここ何を返すかわからん
-	public int getSchoolYear() {
-		return ;
-	}
+//	public int getSchoolYear() {
+//		return ;
+//	}
 	
 	public void setNo(String no) {
 		this.no=no;
