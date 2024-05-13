@@ -1,5 +1,4 @@
 <%@page contentType="text/html; charset=UTF-8" %>
-<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="css/aside.css">
 
 <!DOCTYPE html>
