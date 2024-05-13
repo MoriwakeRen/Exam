@@ -26,9 +26,9 @@ input[type="password"] {
   background-color: lightblue;
 }
 
-/*.loginpass{*/
-/*	vertical-align: middle;*/
-/*}*/
+.loginpass{
+	vertical-align: middle;
+}
 
 .passwordbox{
   text-align: center;
@@ -37,7 +37,7 @@ input[type="password"] {
 .loginbutton{
 	text-align: center;
 }
-input[type="submit"] {
+input[type="button"] {
   width: 50%;
   padding: 10px;
   background-color: blue;
@@ -47,6 +47,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
   background-color: silver;
 }
