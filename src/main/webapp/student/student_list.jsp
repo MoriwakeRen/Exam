@@ -1,5 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<%@include file="../../header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="../../test.jsp"%>
 <%@include file="../../mainmenu/menu.jsp"%>
 
 <div id="main-content">
@@ -27,6 +28,20 @@
 			<button class="button">絞込み</button>
 	</div>
 </div>
-<div></div>
 </div>
 </div>
+
+
+<form action="Product.action" method="post">
+<input type="text" name="keyword">
+<input type="submit" value="検索">
+</form>
+
+<table style="border-collapse:separate;border-spacing:10px;">
+<c:forEach var="product" items="${list}">
+	<tr>
+	<td>${product.name}</td>
+	</tr>
+</c:forEach>
+</table>
+<%@include file="../../footer.jsp"%>
