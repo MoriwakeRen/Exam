@@ -9,10 +9,9 @@ import tool.Action;
 public class LogoutAction extends Action{
 	public void execute(
 			HttpServletRequest req,HttpServletResponse res
-	)throws Exception{
-		
+		)throws Exception{
 		HttpSession session=req.getSession();
-		
+
 		if(session.getAttribute("teacher")!=null) {
 			session.removeAttribute("teacher");
 		}

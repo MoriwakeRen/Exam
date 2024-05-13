@@ -1,12 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<<<<<<< HEAD
 
 <%@include file="../header.jsp"%>
 
-=======
-<%@include file="../header.html"%>
-<jsp:include page="../header.jsp"/>
->>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 
 <div class="container">
@@ -38,10 +33,9 @@
 		</script>
 		<div class="loginbutton">
 		<p>
-			<input type="button" name="login" value="ログイン">
+			<input type="submit" name="login" value="ログイン">
 		</p>
 		</div>
 	</form>
 </div>
-<jsp:include page="footer.jsp"/>
 <%@include file="../footer.html"%>

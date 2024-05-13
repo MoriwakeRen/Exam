@@ -14,4 +14,3 @@ public class LoginAction extends Action{
 			rd.forward(req, res);
 	}
 }
-
