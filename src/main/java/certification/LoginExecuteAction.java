@@ -1,4 +1,4 @@
-package tool;
+package certification;
 
 import bean.Teacher;
 import dao.TeacherDao;
@@ -6,6 +6,7 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import tool.Action;
 
 public class LoginExecuteAction extends Action{
 	public void execute(
@@ -20,7 +21,7 @@ public class LoginExecuteAction extends Action{
 			
 			if(teacher!=null) {
 				session.setAttribute("teacher", teacher);
-				RequestDispatcher rd = req.getRequestDispatcher("menu.jsp");
+				RequestDispatcher rd = req.getRequestDispatcher("../menu.jsp");
 				rd.forward(req, res);
 			}else {
 				req.setAttribute("message", "IDまたはパスワードが確認できませんでした");
