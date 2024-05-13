@@ -1,11 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8" %>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Test</title>
-    <link rel="stylesheet" href="css/menu.css">
-</head>
-<body>
+<%@include file="../header.html"%>
+<jsp:include page="header.jsp"/>
     <header>
         <h1>得点管理システム</h1>
     </header>
@@ -17,7 +12,7 @@
         <aside id="sidebar">
             <section id="side_banner">
                 <ul>
-                    <li class="ue"><a href="">メニュー</a></li>
+                    <li class="ue"><a href="menu.jsp">メニュー</a></li>
                     <li class="naka"><a href="">学生管理</a></li>
                     <li>成績管理</li>
                     <li class="naka2"><a href="">成績登録</a></li>
@@ -27,7 +22,7 @@
             </section>
         </aside>
     </div>
-    <footer>
-        <h5>ふったー</h5>
-    </footer>
-</body>
+    
+<jsp:include page="footer.jsp"/>
+<%@include file="../footer.html"%>
+    
