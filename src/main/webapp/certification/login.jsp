@@ -1,7 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<%@include file="../menu.jsp"%>
 
-<%@include file="../header.html"%>
+<%@include file="../header.jsp"%>
 
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 
