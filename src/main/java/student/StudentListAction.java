@@ -21,5 +21,6 @@ public class StudentListAction extends Action{
 		session.setAttribute("list", list);
 		request.getRequestDispatcher("student_list.jsp").
 	    forward(request, response);
+
 	}
 }

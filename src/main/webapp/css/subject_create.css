@@ -1,3 +1,4 @@
+/* ヘッダー */
 header {
     width: 900px;
     margin: 0 auto;
@@ -9,6 +10,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* メイン要素 */
 #wrapper {
     width: 900px;
     margin: 0 auto;
@@ -17,13 +19,47 @@ header {
 
 #main {
     width: 700px;
-    height:700px;
+    height: 700px;
     float: right;
     border-left: solid 3px #e0e0e0;
     padding-left: 10px;
 }
+#main h2{
+    background-color: #e0e0e0;
+    padding: 5px 5px 5px 15px;
+}
 
-/* サイド */
+/* テキストボックス */
+.search-container {
+    position: relative;
+    width: 300px;
+}
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+.search-input:focus {
+    border-color: #4285f4; /* Google風のフォーカス時の色 */
+}
+.default-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #999; /* デフォルトテキストの色 */
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.search-input:focus + .default-text {
+    opacity: 0;
+    transform: translateY(-150%); /* フォーカス時にテキストを上に移動 */
+}
+
+/* サイドバー */
 #sidebar {
     width: 120px;
     float: left;

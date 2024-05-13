@@ -22,6 +22,48 @@ header {
     border-left: solid 3px #e0e0e0;
     padding-left: 10px;
 }
+#main h2{
+    background-color: #e0e0e0;
+    padding: 5px 5px 5px 15px;
+}
+#main p{
+    float:right;
+}
+
+#main table{
+    width: 700px;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+#main th, td{
+    padding: 8px;
+    text-align: left;
+}
+
+#main th.ikenie {
+    border-bottom: solid 1px black;
+    text-align:right;
+    color:white;
+}
+th.normal{
+    border-bottom: solid 1px black;
+}
+td.normal{
+    border-bottom: solid 1px black;
+}
+td.actions{
+    border-bottom: solid 1px black;
+    text-align:right;
+}
+td.actions a{
+    display: inline-block;
+    margin-left: 15px;
+}
+/* #main td.empty{
+    height: 60px;
+    border: none !important;
+} */
 
 /* サイド */
 #sidebar {

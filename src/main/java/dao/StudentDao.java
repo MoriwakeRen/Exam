@@ -35,30 +35,40 @@ public class StudentDao extends Dao{
 		return student; // listの値を返却する
 	}
 	
-//	一覧表示
-    public List<Student> searchAll() throws Exception{
-    	List<Student> student=new ArrayList<>();
-    	
-    	Connection con=getConnection();
-    	
-    	PreparedStatement st=con.prepareStatement(
-           "select * from student");
-        ResultSet rs=st.executeQuery();
-        
-        while (rs.next()) {
-        	Student p=new Student();
-        	p.setNo(rs.getString("no"));
-        	p.setName(rs.getString("name"));
-        	p.setEntYear(rs.getInt("ent_year"));
-        	p.setNo(rs.getString("class_num"));
-        	p.setIsAttend(rs.getBoolean("is_attend"));
-        	student.add(p);
-        }
-        st.close();
-        con.close();
-        
-        return student;
-    }
+	public List<Student> searchAll() throws Exception{
+		List<Student> student=new ArrayList<>(); // Product型の配列を作成
+
+		Connection con=getConnection(); // DBに接続(DAOのgetConnectionメソッドを実行)
+
+		// select文を実行
+		PreparedStatement st=con.prepareStatement(
+			"select * from student");
+		ResultSet rs=st.executeQuery();
+
+		// データを順に取得
+		while (rs.next()) {
+			Student p=new Student();
+			p.setNo(rs.getString("no"));
+			p.setName(rs.getString("name"));
+			p.setEntYear(rs.getInt("ent_year"));
+			p.setNo(rs.getString("class_num"));
+			p.setIsAttend(rs.getBoolean("is_attend"));
+			student.add(p); // データを一件取得するごとにlistに追記する
+			
+//			private String no;
+//			private String name;
+//			private int entYear;
+//			private String classNum;
+//			private boolean isAttend;
+//			private School school;
+		}
+		st.close();
+		con.close(); // DB接続を閉じる
+
+		return student; // listの値を返却する
+	}
+	
+
 //	private List<Student> postFilter(ResultSet rSet, School school) throws Exception {
 //	    List<Student> list = new ArrayList<>();
 //

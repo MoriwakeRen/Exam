@@ -1,3 +1,4 @@
+/* ヘッダー */
 header {
     width: 900px;
     margin: 0 auto;
@@ -9,6 +10,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* メイン要素 */
 #wrapper {
     width: 900px;
     margin: 0 auto;
@@ -17,13 +19,30 @@ header {
 
 #main {
     width: 700px;
-    height:700px;
+    height: 700px;
     float: right;
     border-left: solid 3px #e0e0e0;
     padding-left: 10px;
 }
+#main h2{
+    background-color: #e0e0e0;
+    padding: 5px 5px 5px 15px;
+}
 
-/* サイド */
+/* 登録完了めっせーじ */
+p.done {
+    width: 700px;
+    font-size: 12px;
+    padding: 3px;
+    background-color: #3cb371;
+}
+
+p.back {
+    margin-top:200px;
+    padding-right:100px;
+}
+
+/* サイドバー */
 #sidebar {
     width: 120px;
     float: left;
