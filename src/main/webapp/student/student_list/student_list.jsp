@@ -1,6 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<%@include file="../header.jsp"%>
-<%@include file="../mainmenu/menu.jsp"%>
+<%@include file="../../test.jsp"%>
+<%@include file="../../mainmenu/menu.jsp"%>
 
 <div id="main-content">
 	<h2>学生管理</h2>
@@ -27,4 +27,7 @@
 			<button class="button">絞込み</button>
 	</div>
 </div>
+<div></div>
 </div>
+</div>
+<%@include file="../../footer.jsp"%>

@@ -1,5 +1,8 @@
 <%@page contentType="text/html; charset=UTF-8"%>
+<%@include file="../menu.jsp"%>
+
 <%@include file="../header.html"%>
+
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 
 <div class="container">
@@ -31,7 +34,7 @@
 		</script>
 		<div class="loginbutton">
 		<p>
-			<input type="button" name="login" value="ログイン">
+			<input type="submit" name="login" value="ログイン">
 		</p>
 		</div>
 	</form>
