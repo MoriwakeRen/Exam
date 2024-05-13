@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
+<link rel="stylesheet" type="text/css" href="../../mainmenu/test.css">
 
-<<<<<<< HEAD
-=======
-<link rel="stylesheet" type="text/css" href="../css/login.css">
+
+
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
     <meta charset="UTF-8">
     <title>ログイン後のユーザー名表示</title>
->>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
 </head>
 <body>
 	<h1>得点管理システム</h1>
