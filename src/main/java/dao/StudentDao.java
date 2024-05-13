@@ -34,6 +34,31 @@ public class StudentDao extends Dao{
 
 		return student; // listの値を返却する
 	}
+	
+//	一覧表示
+    public List<Student> searchAll() throws Exception{
+    	List<Student> student=new ArrayList<>();
+    	
+    	Connection con=getConnection();
+    	
+    	PreparedStatement st=con.prepareStatement(
+           "select * from student");
+        ResultSet rs=st.executeQuery();
+        
+        while (rs.next()) {
+        	Student p=new Student();
+        	p.setNo(rs.getString("no"));
+        	p.setName(rs.getString("name"));
+        	p.setEntYear(rs.getInt("ent_year"));
+        	p.setNo(rs.getString("class_num"));
+        	p.setIsAttend(rs.getBoolean("is_attend"));
+        	student.add(p);
+        }
+        st.close();
+        con.close();
+        
+        return student;
+    }
 //	private List<Student> postFilter(ResultSet rSet, School school) throws Exception {
 //	    List<Student> list = new ArrayList<>();
 //
@@ -75,7 +100,7 @@ public class StudentDao extends Dao{
 			Student s=new Student();
 			s.setEntYear(rs.getInt("entYear"));
 			s.setClassNum(rs.getString("classNum"));
-			s.setAttend(rs.getBoolean("isAttend"));
+			s.setIsAttend(rs.getBoolean("isAttend"));
 			list.add(s);		
 		}
 
@@ -99,7 +124,7 @@ public class StudentDao extends Dao{
 		while (rs.next()) {
 			Student s=new Student();
 			s.setEntYear(rs.getInt("entYear"));
-			s.setAttend(rs.getBoolean("isAttend"));
+			s.setIsAttend(rs.getBoolean("isAttend"));
 			list.add(s);		
 		}
 
@@ -121,7 +146,7 @@ public class StudentDao extends Dao{
 
 		while (rs.next()) {
 			Student s=new Student();
-			s.setAttend(rs.getBoolean("isAttend"));
+			s.setIsAttend(rs.getBoolean("isAttend"));
 			list.add(s);		
 		}
 
