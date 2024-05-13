@@ -53,7 +53,7 @@ public class Student {
 		this.classNum=classNum;
 	}
 	
-	public void setAttend(boolean isAttend) {
+	public void setIsAttend(boolean isAttend) {
 		this.isAttend=isAttend;
 	}
 	
