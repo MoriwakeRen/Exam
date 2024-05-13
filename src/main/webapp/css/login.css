@@ -26,9 +26,9 @@ input[type="password"] {
   background-color: lightblue;
 }
 
-/*.loginpass{*/
-/*	vertical-align: middle;*/
-/*}*/
+.loginpass{
+	vertical-align: middle;
+}
 
 .passwordbox{
   text-align: center;
