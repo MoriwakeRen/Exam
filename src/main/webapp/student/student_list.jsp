@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@page contentType="text/html; charset=UTF-8"%>
 <%-- <%@include file="../test.jsp"%>
  --%>
@@ -33,7 +34,47 @@
 </div>
 </div>
 
+=======
+<%@page contentType="text/html; charset=UTF-8"%>
+ <%@include file="../test.jsp" %>
+ <%@include file="../mainmenu/menu.jsp"%>
 
+>>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
+
+<<<<<<< HEAD
+=======
+<div id="main-content">
+	<h2>学生管理</h2>
+	<section>
+		<ul>
+			<li id="newregist"><a href="">新規登録</a></li>
+		</ul>
+	</section>
+	<div id="search-container">
+		<div id="row">
+			<div id="col-4">
+				<label for="f1">入学年度</label><br> <select title="選択してください"
+					id="f1" name="f1" onchange="this.disabled=true;">
+					<option selected>---------</option>
+				</select>
+			</div>
+			<div id="col-4">
+				<label for="f2">クラス</label><br> <select title="選択してください"
+					id="f2" name="f2" onchange="this.disabled=true;">
+					<option selected>---------</option>
+				</select>
+			</div>
+			<div class="student-action">
+				<label for="f3"><input type="checkbox" id="f3" name="f3">在学中</label>
+			</div>
+			<button class="button">絞込み</button>
+		</div>
+	</div>
+</div>
+<div></div>
+</div>
+
+>>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
 <table>
 	<c:forEach var="student" items="${list}">
 		<tr>
@@ -42,17 +83,12 @@
 			<td>${student.name}</td>
 			<td>${student.classNum}</td>
 			<td>${student.isAttend}</td>
-			<td><c:choose>
-					<c:when test="${student.isAttend}">
-            〇
-          </c:when>
-					<c:otherwise>
-            ×
-          </c:otherwise>
-				</c:choose></td>
 
 		</tr>
 	</c:forEach>
 </table>
+<<<<<<< HEAD
 <%@include file="../footer.jsp"%>
 
+=======
+>>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
