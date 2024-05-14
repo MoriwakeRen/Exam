@@ -21,7 +21,7 @@ public class LoginExecuteAction extends Action{
 			
 			if(teacher!=null) {
 				session.setAttribute("teacher", teacher);
-				RequestDispatcher rd = req.getRequestDispatcher("../menu.jsp");
+				RequestDispatcher rd = req.getRequestDispatcher("../mainmenu/menu.jsp");
 				rd.forward(req, res);
 			}else {
 				req.setAttribute("message", "IDまたはパスワードが確認できませんでした");
