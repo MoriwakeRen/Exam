@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="ja">
-<!-- <head>
-    他の共通なヘッダー情報はここに含まれる
+<head>
+    <!-- 他の共通なヘッダー情報はここに含まれる -->
 </head>
 <body>
-    フッターのコンテンツ -->
+    <!-- フッターのコンテンツ -->
     <footer>
     	<p><small>&copy; 2023 TIC</small></p>
 		<p><small>大原学園</small></p>

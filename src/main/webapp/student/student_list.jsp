@@ -34,4 +34,25 @@
 </div>
 
 
+<table>
+	<c:forEach var="student" items="${list}">
+		<tr>
+			<td>${student.entYear}</td>
+			<td>${student.no}</td>
+			<td>${student.name}</td>
+			<td>${student.classNum}</td>
+			<td>${student.isAttend}</td>
+			<td><c:choose>
+					<c:when test="${student.isAttend}">
+            〇
+          </c:when>
+					<c:otherwise>
+            ×
+          </c:otherwise>
+				</c:choose></td>
+
+		</tr>
+	</c:forEach>
+</table>
 <%@include file="../footer.jsp"%>
+

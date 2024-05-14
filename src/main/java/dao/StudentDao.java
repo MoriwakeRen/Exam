@@ -34,7 +34,7 @@ public class StudentDao extends Dao{
 
 		return student; // listの値を返却する
 	}
-	
+//	一覧表示
 	public List<Student> searchAll() throws Exception{
 		List<Student> student=new ArrayList<>(); // Product型の配列を作成
 
@@ -51,7 +51,7 @@ public class StudentDao extends Dao{
 			p.setNo(rs.getString("no"));
 			p.setName(rs.getString("name"));
 			p.setEntYear(rs.getInt("ent_year"));
-			p.setNo(rs.getString("class_num"));
+			p.setClassNum(rs.getString("class_num"));
 			p.setIsAttend(rs.getBoolean("is_attend"));
 			student.add(p); // データを一件取得するごとにlistに追記する
 			
@@ -68,7 +68,6 @@ public class StudentDao extends Dao{
 		return student; // listの値を返却する
 	}
 	
-
 //	private List<Student> postFilter(ResultSet rSet, School school) throws Exception {
 //	    List<Student> list = new ArrayList<>();
 //
