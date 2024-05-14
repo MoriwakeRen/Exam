@@ -1,7 +1,8 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="../../test.jsp"%>
-<%@include file="../../mainmenu/menu.jsp"%>
+<%-- <%@include file="../test.jsp"%>
+ --%>
+ <%@include file="../header.jsp" %>
+ <%@include file="../aside.jsp"%>
 
 <div id="main-content">
 	<h2>学生管理</h2>
@@ -31,8 +32,10 @@
 		</div>
 	</div>
 </div>
+<div></div>
 </div>
 
+<<<<<<< HEAD
 <table>
 	<c:forEach var="student" items="${list}">
 		<tr>
@@ -53,3 +56,6 @@
 		</tr>
 	</c:forEach>
 </table>
+=======
+<%@include file="../footer.jsp"%>
+>>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
