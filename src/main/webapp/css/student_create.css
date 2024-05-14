@@ -1,1 +1,7 @@
-@charset "UTF-8";
+select {
+	width: 700px;
+}
+
+#student {
+	width: 700px;
+}
