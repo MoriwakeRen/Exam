@@ -2,8 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<link rel="stylesheet" type="text/css" href="../css/login.css">
-<html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>ログイン後のユーザー名表示</title>
@@ -16,5 +15,3 @@
         </form>
     </c:if>
 	
-</body>
-</html>

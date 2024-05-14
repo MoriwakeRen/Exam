@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import bean.School;
 import bean.Teacher;
 
 
@@ -50,7 +49,7 @@ public class TeacherDao extends Dao{
 	            teacher.setId(rs.getString("id"));
 	            teacher.setPassword(storedPassword);
 	            teacher.setName(rs.getString("name"));
-	            teacher.setSchool((School) rs.getObject("school"));
+//	            teacher.setSchool((School) rs.getObject("school"));
 	        }
 	    }
 
