@@ -1,8 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<%-- <%@include file="../test.jsp"%>
- --%>
- <%@include file="../header.jsp" %>
- <%@include file="../aside.jsp"%>
+ <%@include file="../test.jsp" %>
+ <%@include file="../mainmenu/menu.jsp"%>
+
 
 <div id="main-content">
 	<h2>学生管理</h2>
@@ -35,7 +34,6 @@
 <div></div>
 </div>
 
-<<<<<<< HEAD
 <table>
 	<c:forEach var="student" items="${list}">
 		<tr>
@@ -44,18 +42,7 @@
 			<td>${student.name}</td>
 			<td>${student.classNum}</td>
 			<td>${student.isAttend}</td>
-			<td><c:choose>
-					<c:when test="${student.isAttend}">
-            〇
-          </c:when>
-					<c:otherwise>
-            ×
-          </c:otherwise>
-				</c:choose></td>
 
 		</tr>
 	</c:forEach>
 </table>
-=======
-<%@include file="../footer.jsp"%>
->>>>>>> branch 'master' of https://github.com/MoriwakeRen/Exam.git
