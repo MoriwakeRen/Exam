@@ -3,7 +3,7 @@
 <%@include file="../aside.jsp"%>
    <h2>メニュー</h2>
    <div class=gakuseikanri>
-   	<a href="../student/student_list.jsp">学生管理</a>
+   	<a href="../student/StudentList.action">学生管理</a>
    </div>
    <div class=seisekikanri>成績管理
    	<a href="../test/test_regist.jsp">成績登録</a>
