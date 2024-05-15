@@ -177,7 +177,7 @@ public class StudentDao extends Dao{
 	        st.setString(2, student.getName());
 	        st.setInt(3, student.getEntYear());
 	        st.setString(4, student.getClassNum());
-	        st.setBoolean(5, student.isAttend());
+	        st.setBoolean(5, student.getIsAttend());
 	        int rowsAffected = st.executeUpdate();
 
 	        if (rowsAffected > 0) {

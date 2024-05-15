@@ -24,7 +24,7 @@ public class Student {
 		return classNum;
 	}
 	
-	public boolean isAttend() {
+	public boolean getIsAttend() {
 		return isAttend;
 	}
 	

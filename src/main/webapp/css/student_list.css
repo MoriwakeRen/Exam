@@ -1,40 +1,17 @@
+
 footer {
-	width: 1000px;
+	width: 900px; /* 幅を900pxに設定 */
 	background-color: #dcdcdc;
 }
 
 body {
-    max-width: 1000px; /* 幅を1000pxに設定 */
+    max-width: 900px; /* 幅を900pxに設定 */
     background-color: #ffffff;
     margin: 0 auto;
 }
 
-#sidebar {
-    width: 225px;
-    float: left;
-}
-
-#side_banner ul{
-    list-style: none;
-    margin: 10px;
-    padding: 0;
-}
-#side_banner li.naka{
-    padding-bottom: 10px;
-}
-#side_banner li.naka2{
-    padding-bottom: 10px;
-    margin-left: 1em;
-    text-indent: -0.0625em;
-}
-
-#side_banner li.naka3{
-    margin-top:15px;
-    margin-bottom:10px;
-    padding-top:15px;
-}
 h1{
-	width: 1000px;
+	width: 900px; /* 幅を900pxに設定 */
 	background-color: #b0c4de;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -43,7 +20,7 @@ h1{
 
 h2{
 	float: right;
-	width: 700px;
+	width: 600px; /* 幅を700pxに設定 */
 	background-color: #dcdcdc; /* 背景色を#808080に設定 */
     color: #000000; /* 文字色を黒色に設定 */
     margin-top: 0;
@@ -53,7 +30,7 @@ h2{
 }
 
 #maincontent {
-	width: 725px;
+	width: 600px; /* 幅を700pxに設定 */
 	float: right;
 	border-left: solid 2px #333;
 	height: 10px;
@@ -62,11 +39,11 @@ h2{
 #newregist{
 	list-style: none;
 	float: right;
-	
 }
+
 #search-container {
   float: right;
-  width: 700px;
+  width: 600px; /* 幅を700pxに設定 */
   border: 1px solid lightgray;
   border-radius: 3px;
   padding-left: 5px;
