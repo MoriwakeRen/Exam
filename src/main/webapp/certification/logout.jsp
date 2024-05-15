@@ -5,4 +5,4 @@
 <p>ログアウトしました</p>
 <p><a href="Login.action">ログイン</a></p>
 
-<%@include file="../footer.html"%>
+<%@include file="../footer.jsp"%>
