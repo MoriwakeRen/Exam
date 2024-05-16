@@ -1,5 +1,5 @@
 footer {
-    width: 900px;
+/*    width: 900px;*/
     margin: 0 auto;
     background-color: #00e0f0;
     font-size: 12px;
@@ -7,4 +7,6 @@ footer {
     padding-bottom: 2px;
     padding-left: 10px;
     margin-bottom: 20px;
+    text-align: center;
 }
+

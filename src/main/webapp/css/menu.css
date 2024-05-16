@@ -1,13 +1,10 @@
-#wrapper {
-    width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-#main {
-    width: 700px;
-    height:700px;
-    float: right;
-    border-left: solid 3px #e0e0e0;
+h2{
+	margin: 0 auto;
+    background-color: lightgrey;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 2px;
     padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 130px;
 }

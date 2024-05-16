@@ -1,7 +1,9 @@
 /* サイド */
 nav {
     width: 120px;
+    height:450px;    
     float: left;
+    border-right: 1px #dddddd solid;
 }
 
 nav ul{
