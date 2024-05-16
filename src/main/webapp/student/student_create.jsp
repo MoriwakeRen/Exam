@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="../menu.jsp"%>
+<%@include file="../header.jsp" %>
+<%@include file="../aside.jsp" %>
 <link rel="stylesheet" type="text/css" href="../css/student_create.css">
 
 <head>
@@ -54,6 +55,10 @@
 	</dl>
 		
 		<input type="submit" value="登録して終了">
+		
+	 <div class=modoru1>
+   	<a href="../student/student_list.jsp">戻る</a>
+   </div>
 </form> 
 </section>
 </body>
