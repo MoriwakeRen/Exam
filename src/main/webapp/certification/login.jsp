@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 
-<div class="container">
+<div class="login-style">
 	<form action="LoginExecute.action" method="post">
 		<span class="label label-danger">${message}</span>
 		<h2>ログイン</h2>
@@ -33,7 +33,7 @@
 		</script>
 		<div class="loginbutton">
 		<p>
-			<input type="submit" name="login" value="ログイン">
+			<input type="submit" name="login" value="ログイン" class="button">
 		</p>
 		</div>
 	</form>

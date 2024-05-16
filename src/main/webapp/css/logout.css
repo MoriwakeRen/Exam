@@ -1,7 +1,6 @@
-header {
-/*    width: 900px;*/
-    margin: 0 auto;
-    background-color: #00e0f0;
+h2{
+	margin: 0 150px;
+    background-color: lightgrey;
     font-size: 12px;
     padding-top: 5px;
     padding-bottom: 2px;

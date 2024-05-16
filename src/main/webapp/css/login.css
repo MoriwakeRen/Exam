@@ -1,6 +1,6 @@
 
-.container {
-  width: 400px;
+.login-style {
+  width:400px;
   margin: 0 auto;
   padding: 0%;
   background-color: #ffffff;
@@ -37,7 +37,7 @@ input[type="password"] {
 .loginbutton{
 	text-align: center;
 }
-input[type="button"] {
+.button {
   width: 50%;
   padding: 10px;
   background-color: blue;
@@ -47,6 +47,6 @@ input[type="button"] {
   cursor: pointer;
 }
 
-input[type="button"]:hover {
+.button:hover {
   background-color: silver;
 }
