@@ -7,3 +7,17 @@ h2{
     padding-left: 10px;
     margin-bottom: 20px;
 }
+
+.message{
+	margin: 0 150px;
+    background-color: lightcoral;
+    font-size: 0.8rem;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-link{
+	margin: 0 150px;
+	float: bottom;
+}
