@@ -4,14 +4,13 @@ import java.util.List;
 
 import bean.School;
 import bean.Subject;
+import bean.Teacher;
 import dao.SubjectDao;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import tool.Action;
 
-@WebServlet(urlPatterns="/SubjectListAction")
 public class SubjectListAction extends Action{
 	
 	@Override
@@ -19,16 +18,16 @@ public class SubjectListAction extends Action{
 		HttpServletRequest request, HttpServletResponse response
 	) throws Exception {
 		HttpSession session=request.getSession();
+		Teacher teacher = (Teacher)session.getAttribute("teacher");
+//		System.out.println(teacher.getSchool().getCd()); 
+//		↑セッションで学校コードが取得できているかの確認
 		
-		String schoolId=request.getParameter("id");
-		School school = new School();
-		school.setCd(schoolId);
+		School school = teacher.getSchool();
+		SubjectDao dao = new SubjectDao();
 		
-		SubjectDao dao=new SubjectDao();
+		List<Subject> list = dao.filter(school);
 		
-		List<Subject> subjectList=dao.filter(school);
-		
-		session.setAttribute("list", subjectList);
+		request.setAttribute("list", list);
 		
 		request.getRequestDispatcher("subject_list.jsp").forward(request, response);
 	}
