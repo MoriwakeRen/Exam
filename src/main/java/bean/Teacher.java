@@ -18,7 +18,7 @@ public class Teacher implements java.io.Serializable{
 		return name;
 	}
 	
-	public School school() {
+	public School getSchool() {
 		return school;
 	}
 	

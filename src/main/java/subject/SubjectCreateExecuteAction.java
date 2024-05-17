@@ -1,59 +1,55 @@
 package subject;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
+import bean.Subject;
+import bean.Teacher;
+import dao.SubjectDao;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import tool.Action;
-import tool.Page;
 
-@WebServlet(urlPatterns={"/kamokukanri/subject_create"})
-
-public class SubjectCreateExecuteAction extends Action{
-	public void doPost (
-			HttpServletRequest req, HttpServletResponse res
-		) throws ServletException, IOException {
-			PrintWriter out=res.getWriter();
-			Page.header(out);
-			try {
-				InitialContext ic=new InitialContext();
-				DataSource ds=(DataSource)ic.lookup(
-					"java:/comp/env/jdbc/school");
-				Connection con=ds.getConnection(); // DBに接続
-				
-				String SCHOOL_CD=req.getParameter("SCHOOL_CD");
-				String CD=req.getParameter("CD");
-				String NAME=req.getParameter("NAME");
-				
-				PreparedStatement st=con.prepareStatement(
-					"insert into subject values(?, ?, ?)");
-				st.setString(1, SCHOOL_CD);
-				st.setString(2, CD);
-				st.setString(3, NAME);
-				int line=st.executeUpdate(); // sqlの実行。処理した行数を取得
-				
-				if (line>0) {
-					RequestDispatcher rd = req.getRequestDispatcher("menu.jsp");
-					rd.forward(req, res);
-				}
-				
-				
-				
-				st.close();
-				con.close(); // DBを閉じる
-			// 例外発生時の処理
-			} catch (Exception e) {
-				e.printStackTrace(out);
+public class SubjectCreateExecuteAction extends Action {
+	
+	public void execute(
+		HttpServletRequest request, HttpServletResponse response
+	) throws Exception {
+		try {
+			HttpSession session = request.getSession();
+			Teacher teacher = (Teacher)session.getAttribute("teacher");
+			
+			Subject sub = new Subject();
+			sub.setCd(request.getParameter("cd"));
+			sub.setName(request.getParameter("name"));
+			sub.setSchool(teacher.getSchool());
+			
+			SubjectDao dao = new SubjectDao();
+			System.out.println(sub.getCd());
+			System.out.println(sub.getName());
+			System.out.println("test");
+			
+			if(sub.getCd().length() != 3) {
+				request.setAttribute("error1","101");
+				System.out.println("test2");
+	//			return "subject_create.jsp";
+				request.getRequestDispatcher("../subject/subject_create.jsp").forward(request,response);
 			}
-			Page.footer(out); // tool/Page.javaのfooterメソッドを実行
+			
+			if(dao.get(sub.getCd(), sub.getSchool()).getCd() != null) {
+				request.setAttribute("error2", "202");
+				System.out.println("test3");
+	//			return "subject_create.jsp";
+				request.getRequestDispatcher("../subject/subject_create.jsp").forward(request, response);
+			}
+			
+			
+			System.out.println("test5");
+			dao.save(sub);
+			System.out.println("test4");
+			
+//			return "../subject_create_done.jsp";
+			request.getRequestDispatcher("subject_create_done.jsp").forward(request,response);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
+	}
 }

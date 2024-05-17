@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="../header.jsp" %>
-<%@include file="../aside.jsp" %>
+<%@include file="../menu.jsp"%>
 <link rel="stylesheet" type="text/css" href="../css/student_create.css">
 
-
-
+<head>
+</head>
+<body>
 <section>
 <form method="POST" action="#" id ="touroku">
-		 <h2 class="subtitle">学生情報登録
-	</h2>
+		
 	<dl>
-
+	<h2>学生情報登録</h2>
+	
 		<dt>入学年度<dt>
 		<dd>
   <select name="year" id="year" required>
- 
   <option value="" disabled selected >--------</option>
         <option value="2010">2010</option>
 		<option value="2011">2011</option>
@@ -55,11 +54,8 @@
 	</dl>
 		
 		<input type="submit" value="登録して終了">
-		
-	 <div class=modoru1>
-   	<a href="../student/student_list.jsp">戻る</a>
-   </div>
 </form> 
 </section>
+</body>
 
-
+</html>

@@ -40,7 +40,7 @@
 			<td>${student.no}</td>
 			<td>${student.name}</td>
 			<td>${student.classNum}</td>
-			<td>${student.isAttend}</td>
+			<%--<td>${student.isAttend}</td>--%>
 
 		</tr>
 	</c:forEach>

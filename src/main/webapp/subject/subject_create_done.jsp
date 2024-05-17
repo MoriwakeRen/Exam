@@ -6,9 +6,7 @@
     <link rel="stylesheet" href="../css/subject_create_done.css">
 </head>
 <body>
-    <header>
-        <h1>得点管理システム</h1>
-    </header>
+<%@include file="../header.jsp" %>
     <!-- 科目表示するところ -->
     <div id="wrapper">
         <div id="main">
@@ -17,8 +15,8 @@
 
             <table>
                 <tr>
-                    <th class="back"><a href="subject_create.jsp">戻る</a></th>
-                    <th><a href="subject_list.jsp">科目一覧</a></th>
+                    <th class="back"><a href="../subject/SubjectCreate.action">戻る</a></th>
+                    <th><a href="../subject/SubjectList.action">科目一覧</a></th>
                 </tr>
             </table>
             <!-- <nobr>
@@ -26,21 +24,6 @@
                 <p><a href="#">科目一覧</a></p>
             </nobr> -->
         </div>
-        <!-- さいどばー -->
-        <aside id="sidebar">
-            <section id="side_banner">
-                <ul>
-                    <li class="ue"><a href="">メニュー</a></li>
-                    <li class="naka"><a href="">学生管理</a></li>
-                    <li>成績管理</li>
-                    <li class="naka2"><a href="">成績登録</a></li>
-                    <li class="naka2"><a href="">成績参照</a></li>
-                    <li class="naka"><a href="">科目管理</a></li>
-                </ul>
-            </section>
-        </aside>
-    </div>
-    <footer>
-        <h5>ふったー</h5>
-    </footer>
+        <%@include file="../aside.jsp" %>
+<%@include file="../footer.jsp" %>
 </body>
