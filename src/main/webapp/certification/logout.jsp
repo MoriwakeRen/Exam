@@ -4,7 +4,11 @@
 <%@include file="../header.jsp"%>
 
 <h2>ログアウト</h2>
-<p>ログアウトしました</p>
-<p><a href="Login.action">ログイン</a></p>
+<div class="message">
+	<p>ログアウトしました</p>
+</div>
+<div class="login-link">
+	<p><a href="Login.action">ログイン</a></p>
+</div>
 
 <%@include file="../footer.jsp"%>

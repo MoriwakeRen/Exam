@@ -1,7 +1,7 @@
 /* サイド */
 nav {
     width: 120px;
-    height:450px;    
+    height:100%;    
     float: left;
     border-right: 1px #dddddd solid;
 }
