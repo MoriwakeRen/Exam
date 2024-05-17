@@ -4,18 +4,18 @@
 <%@include file="../aside.jsp" %>
 <link rel="stylesheet" type="text/css" href="../css/student_create.css">
 
-<head>
-</head>
-<body>
+
+
 <section>
 <form method="POST" action="#" id ="touroku">
-		
+		 <h2 class="subtitle">学生情報登録
+	</h2>
 	<dl>
-	<h2>学生情報登録</h2>
-	
+
 		<dt>入学年度<dt>
 		<dd>
   <select name="year" id="year" required>
+ 
   <option value="" disabled selected >--------</option>
         <option value="2010">2010</option>
 		<option value="2011">2011</option>
@@ -61,6 +61,5 @@
    </div>
 </form> 
 </section>
-</body>
 
-</html>
+

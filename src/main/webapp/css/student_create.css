@@ -1,7 +1,17 @@
+.subtitle {
+	margin-left: 120px;
+	background-color:lightgray;
+	
+}
+
 select {
 	width: 700px;
 }
 
 #student {
 	width: 700px;
+}
+
+section {
+	padding: 10px;
 }
