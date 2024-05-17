@@ -11,7 +11,7 @@
    	<a href="../certification/error.jsp">成績参照</a>
    </div>
    <div class=kamokukanri>
-   	<a href="../subject/subject_list.jsp">科目管理</a>
+   	<a href="../subject/SubjectList.action">科目管理</a>
    </div>
     
 <%@include file="../footer.jsp"%>

@@ -108,6 +108,133 @@ public class StudentDao extends Dao{
 		return classnum;// listの値を返却する
 	}
 	
+	public List<Student> search(Integer entYearInt, String classNum, Boolean isAttendStr) throws Exception {
+	    List<Student> students=new ArrayList<>();
+	    Connection con=getConnection();
+	    String query = "select * from student";
+	    List<Object> parameters = new ArrayList<>();
+	    
+	    if (entYearInt != null || classNum != null || isAttendStr != null) {
+	        query += " where";
+	        boolean first = true;
+	        
+	        if (entYearInt != null) {
+	            query += " ent_year = ?";
+	            parameters.add(entYearInt);
+	            first = false;
+	        }
+	        
+	        if (classNum != null && !classNum.isEmpty()) {
+	            if (!first) {
+	                query += " and";
+	            }
+	            query += " class_num = ?";
+	            parameters.add(classNum);
+	            first = false;
+	        }
+	        
+	        if (isAttendStr != null) {
+	            if (!first) {
+	                query += " and";
+	            }
+	            query += " is_attend = ?";
+	            parameters.add(isAttendStr.booleanValue());
+	        }
+	    }	    
+	    PreparedStatement st = con.prepareStatement(query);
+	    for (int i = 0; i < parameters.size(); i++) {
+	        st.setObject(i + 1, parameters.get(i));
+	    }	    
+	    ResultSet rs = st.executeQuery();
+	    while (rs.next()) {
+	        Student p = new Student();
+	        p.setNo(rs.getString("no"));
+	        p.setName(rs.getString("name"));
+	        p.setEntYear(rs.getInt("ent_year"));
+	        p.setClassNum(rs.getString("class_num"));
+	        p.setIsAttend(rs.getBoolean("is_attend"));
+	        p.setSchool(rs.getString("school_cd"));
+	        students.add(p);
+	    }
+	    st.close();
+	    con.close();
+	    return students;
+	}
+
+	public List<Student> searchBySchoolAndYear(String school, int entYear) throws Exception {
+	    List<Student> students = new ArrayList<>();
+	    Connection con = getConnection();
+	    PreparedStatement st = con.prepareStatement(
+	        "SELECT * FROM student WHERE school_cd = ? AND ent_year = ?");
+	    st.setString(1, school);
+	    st.setInt(2, entYear);
+	    ResultSet rs = st.executeQuery();
+	    while (rs.next()) {
+	        Student p = new Student();
+	        p.setNo(rs.getString("no"));
+	        p.setName(rs.getString("name"));
+	        p.setEntYear(rs.getInt("ent_year"));
+	        p.setClassNum(rs.getString("class_num"));
+	        p.setIsAttend(rs.getBoolean("is_attend"));
+	        p.setSchool(rs.getString("school_cd"));
+	        students.add(p);
+	    }
+	    st.close();
+	    con.close();
+	    return students;
+	}
+	
+	public List<Student> searchBySchoolAndYearAndClass(String school, int entYear, String classNum) throws Exception {
+	    List<Student> students = new ArrayList<>();
+	    Connection con = getConnection();
+	    PreparedStatement st = con.prepareStatement(
+	        "SELECT * FROM student WHERE school_cd = ? AND ent_year = ? AND class_num = ?");
+	    st.setString(1, school);
+	    st.setInt(2, entYear);
+	    st.setString(3, classNum);
+	    ResultSet rs = st.executeQuery();
+	    while (rs.next()) {
+	        Student p = new Student();
+	        p.setNo(rs.getString("no"));
+	        p.setName(rs.getString("name"));
+	        p.setEntYear(rs.getInt("ent_year"));
+	        p.setClassNum(rs.getString("class_num"));
+	        p.setIsAttend(rs.getBoolean("is_attend"));
+	        p.setSchool(rs.getString("school_cd"));
+	        students.add(p);
+	    }
+	    st.close();
+	    con.close();
+	    return students;
+	}
+
+	public List<Student> searchBySchoolAndYearAndIsAttend(String school, int entYear, Boolean isAttend) throws Exception {
+	    List<Student> students = new ArrayList<>();
+	    Connection con = getConnection();
+	    PreparedStatement st = con.prepareStatement(
+	        "SELECT * FROM student WHERE school_cd = ? AND ent_year = ? AND is_attend = ?");
+	    st.setString(1, school);
+	    st.setInt(2, entYear);
+	    st.setBoolean(3, isAttend);
+	    ResultSet rs = st.executeQuery();
+	    while (rs.next()) {
+	        Student p = new Student();
+	        p.setNo(rs.getString("no"));
+	        p.setName(rs.getString("name"));
+	        p.setEntYear(rs.getInt("ent_year"));
+	        p.setClassNum(rs.getString("class_num"));
+	        p.setIsAttend(rs.getBoolean("is_attend"));
+	        p.setSchool(rs.getString("school_cd"));
+	        students.add(p);
+	    }
+	    st.close();
+	    con.close();
+	    return students;
+	}
+
+
+
+	
 //	private List<Student> postFilter(ResultSet rSet, School school) throws Exception {
 //	    List<Student> list = new ArrayList<>();
 //

@@ -14,7 +14,7 @@ public class SchoolDao extends Dao{
 
 		// select文を実行
 		PreparedStatement st=con.prepareStatement(
-			"select * from school where no=?");
+			"select * from school where cd=?");
 		st.setString(1, no); // 修正
 		ResultSet rs=st.executeQuery();
 

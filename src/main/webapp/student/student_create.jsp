@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="../menu.jsp"%>
+    <%@include file="../header.jsp"%>
+<%@include file="../aside.jsp"%>
 <link rel="stylesheet" type="text/css" href="../css/student_create.css">
 
 <head>

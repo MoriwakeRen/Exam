@@ -8,7 +8,7 @@
                     <li><label>成績管理</label></li>
                     <li class="naka2"><a href="../certification/error.jsp">成績登録</a></li>
                     <li class="naka2"><a href="../certification/error.jsp">成績参照</a></li>
-                    <li class="naka"><a href="../subject/subject_list.jsp">科目管理</a></li>
+                    <li class="naka"><a href="../subject/SubjectList.action">科目管理</a></li>
                 </ul>
         </nav>
 </div>
